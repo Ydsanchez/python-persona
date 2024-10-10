@@ -4,7 +4,7 @@ from backendpython.src.models.persona import Persona
 
 
 router = APIRouter(prefix="/api/backend-python",
-                   tags=["persona-python"],
+                   tags=["persona-python"], 
                    responses={404: {"message": "No encontrado"}})
 
 

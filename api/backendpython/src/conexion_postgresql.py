@@ -4,16 +4,16 @@ from fastapi import HTTPException
 def get_db_connection():
     try:
         connection = psycopg2.connect(
-            host='activity-postgresql-2',
+            host='postgresql-activity-1',
             port='5432',
-            user='persons',
-            password='persons',
-            database='persons'
+            user='ydsanchez',
+            password='Yepe1003',
+            database='dbpersonas'
         )
         return connection
-    except Exception as ex:
+    except Exception as ex:         
         print(f"Error: {ex}")
-        raise HTTPException(status_code=500, detail="Error al conectar a la base de datos")
+        raise HTTPException(status_code=500     , detail="Error al conectar a la base de datos")
     
 def check_and_create_table():
     connection = get_db_connection()
